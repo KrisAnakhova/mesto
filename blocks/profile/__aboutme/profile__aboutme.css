@@ -1,0 +1,17 @@
+.profile__aboutme {
+  display: flex;
+  flex-direction: column;
+  width: 294px;
+  margin-right: 18px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1279px) {
+  .profile__aboutme {
+    margin-left: 45px;
+    margin-right: 10px;
+    width: 189px;
+
+
+  }
+
+}

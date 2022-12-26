@@ -1,0 +1,22 @@
+.element__like {
+  width: 22px;
+  height: 19px;
+  background-image: url(../../../images/Vector.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 0;
+  border: 0;
+  background-color: white;
+
+}
+.element__like:hover {
+  opacity: 0.5;
+
+}
+.element__like:active {
+  background-image: url(../../../images/UnionActive.svg);
+  opacity: 1;
+}
+
+
+
