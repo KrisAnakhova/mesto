@@ -11,4 +11,4 @@
 Также после внесения изменений и нажатия кнопки «Сохранить» информация на странице обновляется, а попап автоматически закрывается.
 
 ## [Ссылка на макет в Figma &rarr;](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=0%3A1)
-## [Ссылка на проект &rarr;]()
+## [Ссылка на проект &rarr;](https://krisanakhova.github.io/mesto/)
