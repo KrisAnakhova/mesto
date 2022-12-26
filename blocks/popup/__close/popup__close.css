@@ -6,7 +6,8 @@
     position: absolute;
     top: -40px;
     right: -40px;
-    background-color: #00000000;
+    /*background-color: #00000000;*/
+    background-color: transparent;
     border: none;
     padding: 0;
     background-repeat: no-repeat;

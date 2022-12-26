@@ -6,7 +6,8 @@
   background-repeat: no-repeat;
   padding: 0;
   border: 0;
-  background-color: white;
+  /*background-color: white;*/
+  background-color: transparent;
 
 }
 .element__like:hover {

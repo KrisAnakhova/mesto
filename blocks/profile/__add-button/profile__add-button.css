@@ -6,7 +6,8 @@
 
   margin-top: 35px;
   margin-bottom: 35px;
-  background-color: black;
+  background-color: transparent;
+  /*background-color: black;*/
   background-size: contain;
   background-repeat: no-repeat;
   padding: 0;
