@@ -9,7 +9,7 @@
  width: 24px;
  height: 24px;
  margin: 37px 0 0 0;
-
+ cursor: pointer;
 }
 .profile__edit-button:hover {
     opacity: 0.6;
