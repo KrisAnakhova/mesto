@@ -31,7 +31,7 @@ const initialCards = [
 const editButton = document.querySelector('.profile__edit-button');
 
 //нашли попап
-const popup = document.querySelector('.popup__profile');
+const popup = document.querySelector('.popup_profile');
 //кнопка закрытия
 const closeButton = document.querySelector('.popup__close');
 
@@ -92,7 +92,7 @@ const addButton = document.querySelector('.profile__add-button');
 const closeButtonadd = document.querySelector('.popup__close_card');
 
 //нашли попап для добавления карточек
-const popupCards = document.querySelector('.popup__cards');
+const popupCards = document.querySelector('.popup_cards');
 
 //открытие попап для добавления карточек при нажатии на кнопку
 addButton.addEventListener('click', function(){
@@ -110,7 +110,7 @@ const formPopupCard = document.querySelector('.popup__form-card'); // форма
 const template = document.getElementById('element__template');
 
 //попап открытия картинки
-const popupBigcard = document.querySelector('.popup__bigcard');
+const popupBigcard = document.querySelector('.popup_bigcard');
 const closeImg = document.querySelector('.popup__close-img')
 
 closeImg.addEventListener('click', function(){
