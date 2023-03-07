@@ -15,10 +15,10 @@
   opacity: 0.5;
 
 }
-.element__like:active {
-  background-image: url(../../../images/UnionActive.svg);
+/*.element__like:active {
+  background-image: url(../../../images/Union.png);
   opacity: 1;
-}
+}*/
 
 
 

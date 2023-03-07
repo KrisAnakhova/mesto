@@ -29,12 +29,13 @@
       <button type="button" class="profile__add-button"></button>
 
     </section>
-    <div class="popup">
+    <!-- Попап для редактирования профиля -->
+    <div class="popup popup__profile">
       <div class="popup__container">
         <button type="button" class="popup__close"></button>
 
           <h2 class="popup__title">Редактировать профиль</h2>
-          <form class="popup__editform" name="formPopup">
+          <form class="popup__editform" name="formPopupPr">
             <input type="text" name="nameInput" value="" placeholder="Имя" class="popup__field popup__field_type_name">
             <input type="text" name="jobInput" value="" placeholder="О себе" class="popup__field popup__field_type_job">
             <input type="submit" value="Сохранить" class="popup__save">
@@ -42,82 +43,53 @@
       </div>
     </div>
   <!-- Попап для добавления карточки -->
-    <div class="popup popup_cards">
+    <div class="popup popup__cards">
       <div class="popup__container">
         <button type="button" class="popup__close popup__close_card"></button>
 
           <h2 class="popup__title">Новое место</h2>
-          <form class="popup__editform popup__" name="formPopup">
-            <input type="text" name="mestoInput" value="" placeholder="Название" class="popup__field popup__field_type_mesto">
-            <input type="text" name="linkInput" value="" placeholder="Ссылка на картинку" class="popup__field popup__field_type_link">
-            <input type="submit" value="Создать" class="popup__save">
+          <form class="popup__editform popup__form-card" name="formPopupCard">
+            <input type="text" name="name" value="" placeholder="Название" class="popup__field popup__field_type_mesto">
+            <input type="text" name="link" value="" placeholder="Ссылка на картинку" class="popup__field popup__field_type_link">
+            <input type="submit" value="Создать" class="popup__save popup__save-card">
           </form>
       </div>
     </div>
 
-
-
     <section class="elements">
 
-      <article class="element">
+      <!--<article class="element">
         <img class="element__photo" src="images/karachaevsk.jpg" alt="Карачаевск">
         <button type="button" class="element__delete"></button>
         <div class="element__group">
           <h2 class="element__title">Карачаевск</h2>
           <button type="button" class="element__like"></button>
         </div>
-      </article>
-
-      <article class="element">
-        <img class="element__photo" src="images/goraElbrus.jpg" alt="Гора Эльбрус">
-        <button type="button" class="element__delete"></button>
-        <div class="element__group">
-          <h2 class="element__title">Гора Эльбрус</h2>
-          <button type="button" class="element__like"></button>
-        </div>
-      </article>
-
-      <article class="element">
-        <img class="element__photo" src="images//dombay.jpg" alt="Домбай">
-        <button type="button" class="element__delete"></button>
-        <div class="element__group">
-          <h2 class="element__title">Домбай</h2>
-          <button type="button" class="element__like"></button>
-        </div>
-
-      </article>
-
-      <article class="element">
-        <img class="element__photo" src="images/goraElbrus.jpg" alt="Гора Эльбрус">
-        <button type="button" class="element__delete"></button>
-        <div class="element__group">
-          <h2 class="element__title">Гора Эльбрус</h2>
-          <button type="button" class="element__like"></button>
-        </div>
-
-      </article>
-
-      <article class="element">
-        <img class="element__photo" src="images/dombay.jpg" alt="Домбай">
-        <button type="button" class="element__delete"></button>
-        <div class="element__group">
-          <h2 class="element__title">Домбай</h2>
-          <button type="button" class="element__like"></button>
-        </div>
-
-      </article>
-
-      <article class="element">
-        <img class="element__photo" src="images/karachaevsk.jpg" alt="Карачаево-Черкесия">
-        <button type="button" class="element__delete"></button>
-        <div class="element__group">
-          <h2 class="element__title">Карачаево - Черкесия</h2>
-          <button type="button" class="element__like"></button>
-        </div>
-
-      </article>
+      </article>-->
 
     </section>
+
+    <template id="element__template">
+      <article class="element">
+        <img class="element__photo" src="#" alt="фото места">
+        <button type="button" class="element__delete"></button>
+        <div class="element__group">
+          <h2 class="element__title"></h2>
+          <button type="button" class="element__like"></button>
+        </div>
+      </article>
+    </template>
+
+    <!-- Попап расширения карточки-->
+    <div class="popup popup__bigcard">
+      <div class="popup__container-bigcard">
+        <button type="button" class="popup__close popup__close-img"></button>
+        <figure class="popup__figure">
+          <img class="popup__img" src="" alt="">
+          <figcaption class="popup__img-title"></figcaption>
+      </div>
+    </div>
+
 
   </main>
 

@@ -1,0 +1,7 @@
+.popup__container-bigcard {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  border-radius: 10px;
+  position: relative;
+}
