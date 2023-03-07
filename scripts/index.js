@@ -43,8 +43,8 @@ const popupOpen = document.querySelector('.popup__opened');
 
 //обьявили формы для заполнения в попап редак.профиля
 const formPopupPr = document.querySelector('.popup__editform');
-let nameInput = document.querySelector('.popup__field_type_name');
-let jobInput = document.querySelector('.popup__field_type_job');
+const nameInput = document.querySelector('.popup__field_type_name');
+const jobInput = document.querySelector('.popup__field_type_job');
 
 //------------------------------------------------------------------------
 //открытие попап
