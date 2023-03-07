@@ -28,12 +28,12 @@ const initialCards = [
 
 //console.log('Hello')
 //кнопка редоктирования профиля
-const editButton = document.querySelector('.profile__edit-button');
+const buttonEdit = document.querySelector('.profile__edit-button'); //editButton
 
 //нашли попап
 const popup = document.querySelector('.popup_profile');
 //кнопка закрытия
-const closeButton = document.querySelector('.popup__close');
+const buttonClose = document.querySelector('.popup__close'); //closeButton
 
 //нашли имя профиля
 const profTitle = document.querySelector('.profile__title');
@@ -57,20 +57,20 @@ function closePopup(popup){
 }
 
 //открытие попап при нажатии на редак.профиля
-editButton.addEventListener('click', function(){
+buttonEdit.addEventListener('click', function(){
   nameInput.value = profTitle.textContent;
   jobInput.value = profSubtitle.textContent;
   openPopup(popup);
 });
 
 //закрытие попап при нажатии на крестик
-closeButton.addEventListener('click', function(){
+buttonClose.addEventListener('click', function(){
   closePopup(popup);
 
 })
 
 //сделали форму для заполнения с сохранением данных в профиле
-function handleFormSubmit(evt) {
+function handleFormProfileSubmit(evt) {
   evt.preventDefault();
 
 // Выбрали элементы, куда должны быть вставлены значения полей
@@ -78,52 +78,53 @@ function handleFormSubmit(evt) {
   profTitle.textContent = nameInput.value;
   profSubtitle.textContent = jobInput.value;
   closePopup(popup)
-
-  }
-
+}
 // Прикрепляем обработчик к форме:
 // он будет следить за событием “submit” - «отправка»/ сохранить
-formPopupPr.addEventListener('submit', handleFormSubmit);
+
+formPopupPr.addEventListener('submit', handleFormProfileSubmit);
+
 //-------------------------------------------------------------------------------------
 //обьявили кнопку открыть попап для добавления карточки
-const addButton = document.querySelector('.profile__add-button');
+const buttonAdd = document.querySelector('.profile__add-button'); //addButton
 
 //кнопка закрытия попап для добавления карточек
-const closeButtonadd = document.querySelector('.popup__close_card');
+const buttonClosePopupCard = document.querySelector('.popup__close_card'); //closeButtonadd
 
 //нашли попап для добавления карточек
 const popupCards = document.querySelector('.popup_cards');
 
 //открытие попап для добавления карточек при нажатии на кнопку
-addButton.addEventListener('click', function(){
+buttonAdd.addEventListener('click', function(){
   openPopup(popupCards);
 });
 
 //закрытие попап для добавления карточек при нажатии на крестик
-closeButtonadd.addEventListener('click', function(){
+buttonClosePopupCard.addEventListener('click', function(){
   closePopup(popupCards);
 });
 //--------------------------------------------------------------------------------------ПР5
 
 const elements = document.querySelector('.elements'); //нашли секцию для карточек
 const formPopupCard = document.querySelector('.popup__form-card'); // форма для добавления карточки
-const template = document.getElementById('element__template');
+//const template = document.getElementById('element__template');
 
 //попап открытия картинки
-const popupBigcard = document.querySelector('.popup_bigcard');
-const closeImg = document.querySelector('.popup__close-img')
+const popupBigCard = document.querySelector('.popup_bigcard');
+const imgClose = document.querySelector('.popup__close-img') //closeImg
 
-closeImg.addEventListener('click', function(){
-  closePopup(popupBigcard);
+imgClose.addEventListener('click', function(){
+  closePopup(popupBigCard);
 });
 
 const popupImg = document.querySelector('.popup__img');
 const popupImgTitle = document.querySelector('.popup__img-title');
 
 
-// ---------------------фунцкия добавления новой карточки
+// ---------------------функция добавления новой карточки
 const getCardElement = ({name, link}) => {
-  const newCardElement = template.content.cloneNode(true);
+  const template = document.getElementById('element__template').content;
+  const newCardElement = template.querySelector('.element').cloneNode(true);
   const newCardName = newCardElement.querySelector('.element__title');
   const newCardLink = newCardElement.querySelector('.element__photo');
 
@@ -131,19 +132,20 @@ const getCardElement = ({name, link}) => {
   newCardLink.src = link;
   newCardLink.alt = name;
 
-  //кнопка удаления
-  const deleteCard = newCardElement.querySelector('.element__delete');
-  deleteCard.addEventListener('click', function() {
-    const delBut = deleteCard.closest('.element');
-    delBut.remove();
-  })
+    //кнопка удаления + слушатель
+  const cardDelete = newCardElement.querySelector('.element__delete'); //deleteCard
+  cardDelete.addEventListener('click', function() {
+    deleteCard(newCardElement)
+
+  });
 
   //кнопка лайка
-  const likeCard = newCardElement.querySelector('.element__like');
-  likeCard.addEventListener('click', function (evt){
+  const cardLike = newCardElement.querySelector('.element__like'); //likeCard
+  cardLike.addEventListener('click', function (evt){
     evt.target.classList.toggle('element__like_active');
 
   })
+
 
   //расширение картинки через попап
 
@@ -152,10 +154,14 @@ const getCardElement = ({name, link}) => {
     popupImgTitle.textContent = name;
     popupImg.alt = name;
 
-    openPopup(popupBigcard);
+    openPopup(popupBigCard);
   });
 
   return newCardElement;
+}
+//функция удаления карточки удаления
+function deleteCard(newCardElement) {
+  newCardElement.remove('.element');
 }
 
 
@@ -174,8 +180,8 @@ formPopupCard.addEventListener('submit', (evt) => {
   const name = evt.target.name.value;
   const link = evt.target.link.value;
   renderCard(elements, {name, link});
-  evt.target.reset();
   closePopup(popupCards);
+  evt.target.reset();
 
 })
 

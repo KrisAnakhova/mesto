@@ -38,6 +38,7 @@
 @import url(../blocks/popup/__field/popup__field.css);
 @import url(../blocks/popup/__save/popup__save.css);
 @import url(../blocks/popup/_opened/popup_opened.css);
+@import url(../blocks/popup/_bigcard/popup_bigcard.css);
 
 @import url(../blocks/popup/__container-bigcard/popup__container-bigcard.css);
 @import url(../blocks/popup/__figure/popup__figure.css);
