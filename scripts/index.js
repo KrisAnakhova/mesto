@@ -47,27 +47,34 @@ const nameInput = document.querySelector('.popup__field_type_name');
 const jobInput = document.querySelector('.popup__field_type_job');
 
 //------------------------------------------------------------------------
-//открытие попап
+//открытие попап + для ПР6 вставили слушатель для закрытия через кнопку ESC
 function openPopup(popup){
   popup.classList.add('popup_opened');
-}
+  document.addEventListener('keydown', (evt) => {
+    if (evt.key === 'Escape') {
+      popup.classList.remove('popup_opened');
+    };
+
+  });
+};
+
 //закрытие попап
 function closePopup(popup){
   popup.classList.remove('popup_opened');
-}
+};
 
 //открытие попап при нажатии на редак.профиля
 buttonEdit.addEventListener('click', function(){
   nameInput.value = profTitle.textContent;
   jobInput.value = profSubtitle.textContent;
-  openPopup(popup);
+ openPopup(popup);
 });
 
 //закрытие попап при нажатии на крестик
 buttonClose.addEventListener('click', function(){
   closePopup(popup);
 
-})
+});
 
 //сделали форму для заполнения с сохранением данных в профиле
 function handleFormProfileSubmit(evt) {
@@ -78,7 +85,7 @@ function handleFormProfileSubmit(evt) {
   profTitle.textContent = nameInput.value;
   profSubtitle.textContent = jobInput.value;
   closePopup(popup)
-}
+};
 // Прикрепляем обработчик к форме:
 // он будет следить за событием “submit” - «отправка»/ сохранить
 
@@ -144,7 +151,7 @@ const getCardElement = ({name, link}) => {
   cardLike.addEventListener('click', function (evt){
     evt.target.classList.toggle('element__like_active');
 
-  })
+  });
 
 
   //расширение картинки через попап
@@ -162,17 +169,17 @@ const getCardElement = ({name, link}) => {
 //функция удаления карточки удаления
 function deleteCard(newCardElement) {
   newCardElement.remove('.element');
-}
+};
 
 
 function renderCard(card, {name, link}) {
   card.prepend(getCardElement({name, link}));
-}
+};
 
 //добавление карточек из массива
 initialCards.forEach((name, link) => {
   renderCard(elements, name, link)
-})
+});
 
 // форма для добавления своей карточки
 formPopupCard.addEventListener('submit', (evt) => {
@@ -183,22 +190,28 @@ formPopupCard.addEventListener('submit', (evt) => {
   closePopup(popupCards);
   evt.target.reset();
 
-})
+});
+//--------------------------------ПР6----------------------------------------------------------------
 
+//--Закрытие всех попап кликом на оверлей
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+popup.addEventListener('click', function (event) {
+  if (event.target === event.currentTarget) {
+  closePopup(popup);
+  }
+});
+popupCards.addEventListener('click', function (event) {
+  if (event.target === event.currentTarget) {
+  closePopup(popupCards);
+  }
+});
+popupBigCard.addEventListener('click', function (event) {
+  if (event.target === event.currentTarget) {
+    closePopup(popupBigCard);
+  }
+});
+//--------------------------------------------------------------------------------------------------------
+//---Валидация формы «Редактировать профиль»
 
 
 
