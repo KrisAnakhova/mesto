@@ -3,8 +3,8 @@
 //const jobInput = document.querySelector('.popup__field_type_job');
 ////const inputElement = document.querySelector('.popup__field') //= nameInput имя профиля
 
-const hidddenError = (errorElement, inputErrorClass) => {
-  errorElement.innerText = '';
+const hideError = (errorElement, inputErrorClass) => {
+  errorElement.textContent = '';
   errorElement.classList.remove(inputErrorClass);
 
 };
@@ -13,7 +13,7 @@ const hideInputError = (inputElement, inputInvalidClass) => {
 };
 
 const showError = (errorElement, message, inputErrorClass) => {
-  errorElement.innerText = message;
+  errorElement.textContent = message;
   errorElement.classList.add(inputErrorClass);
 
 };
@@ -35,7 +35,7 @@ const setInputState = (inputElement, isValid, options) => {
 	const inputSectionElement = inputElement.closest(inputSectionSelector);
 	const errorElement = inputSectionElement.querySelector(`.${inputElement.id}-error`);
 	if (isValid) {
-		hidddenError(errorElement, inputErrorClass);
+		hideError(errorElement, inputErrorClass);
     hideInputError(inputElement, options.inputInvalidClass)
 	} else {
 		showError(errorElement, inputElement.validationMessage, inputErrorClass);

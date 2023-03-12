@@ -57,10 +57,10 @@
   <!-- Попап для редактирования профиля -->
   <div class="popup popup_profile">
     <div class="popup__container">
-      <button type="button" class="popup__close"></button>
+      <button type="button" class="popup__close popup__close_profile"></button>
 
         <h2 class="popup__title">Редактировать профиль</h2>
-        <form class="popup__editform" name="formPopupPr">
+        <form class="popup__editform" name="formPopup">
 
             <input type="text" id="name-input" name="nameInput" value="" placeholder="Имя" class="popup__field popup__field_type_name" required minlength="2" maxlength="40" >
             <div class="popup__field-error popup__field-error_active name-input-error" ></div>
@@ -80,7 +80,7 @@
       <button type="button" class="popup__close popup__close_card"></button>
 
         <h2 class="popup__title">Новое место</h2>
-        <form class="popup__editform popup__form-card" name="formPopupCard">
+        <form class="popup__editform popup__form-card" name="formPopupCard" novalidate>
 
             <input type="text" id="mesto-input" name="name" value="" placeholder="Название" class="popup__field popup__field_type_mesto" required minlength="2" maxlength="30">
             <div class="popup__field-error mesto-input-error"></div>
