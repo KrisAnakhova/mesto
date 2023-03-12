@@ -1,0 +1,7 @@
+.popup__field_invalid {
+    border-bottom: 1px solid #e53e3e;
+    color: #000000;
+    outline: none;
+    margin-bottom: 0;
+
+}

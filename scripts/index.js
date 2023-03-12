@@ -211,7 +211,23 @@ popupBigCard.addEventListener('click', function (event) {
   }
 });
 //--------------------------------------------------------------------------------------------------------
-//---Валидация формы «Редактировать профиль»
+
+
+const options = {
+  formSelector: '.popup__editform',
+  submitSelector: '.popup__save',
+  inputSelector: '.popup__field',
+  inputInvalidClass: 'popup__field_invalid',
+  disabledButtonClass: 'popup__save_inactive',
+  inputSectionSelector: '.popup',
+  inputErrorSelector: '.popup__field-error',
+  inputErrorClass: 'popup__field-error_active',
+
+}
+
+enableValidation(options);
+
+
 
 
 

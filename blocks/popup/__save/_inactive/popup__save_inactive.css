@@ -1,0 +1,27 @@
+.popup__save_inactive {
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #ffffff;
+  background-color: black;
+  height: 50px;
+  margin: 18px 0 37px 0;
+  border-radius: 2px;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  opacity: 0.15;
+
+
+}
+
+
+.popup__save_inactive:hover {
+  opacity: 0.15;
+}
+
+
